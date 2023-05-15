@@ -1,0 +1,24 @@
+#root {
+
+}
+
+.header-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  background-color: yellowgreen;
+  width: 100%;
+  
+}
+
+.header-container h1{
+  margin-left: 20px;
+}
+
+.Nav{
+  display: flex;
+  width: 200px;
+  margin-right: 20px;
+  justify-content: space-between;
+}
