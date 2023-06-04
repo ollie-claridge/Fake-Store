@@ -1,0 +1,56 @@
+.details-container{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    background-color: #FAFAFA;
+}
+
+.detailsCard{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-inline: 200px;
+    width: 80%;
+    height: 500px;
+    padding: 80px;
+    background-color: white;
+}
+
+.detailsCard img{
+    height: auto;
+    width: 200px;
+    margin: 60px;
+    
+}
+
+.cardInfo{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 10px;
+    align-items: center;
+    color: black;
+    margin-top: 10px;
+    
+}
+.h1, p{
+    width: auto;
+}
+.card-info {
+color: black;
+padding-top: 15px;
+width: 300px;
+
+}
+
+.details-btn{
+    background-color: yellow;
+    color: black;
+    font-weight: 900;
+    cursor: pointer;
+    height: 30px;
+    width: 100px;
+    margin-top: 10px;
+
+}

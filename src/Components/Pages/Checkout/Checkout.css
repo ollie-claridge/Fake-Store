@@ -1,0 +1,25 @@
+.checkout-container{
+    display: flex;
+        min-height: 100vh;
+        background-color: #FAFAFA;
+    }
+
+.checkout-box{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr 1fr;
+    grid-template-rows: 50px;
+    /* grid-auto-rows: 200px; */
+    margin-inline: 120px;
+    margin-top:50px;
+    width: 90%;
+    height: 500px;
+    background-color: white;
+    color: grey;
+    text-align: center;
+    padding: 5px;
+    border-bottom: 2px solid grey;
+}
+
+.Price{
+
+}

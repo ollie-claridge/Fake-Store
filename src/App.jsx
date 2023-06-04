@@ -1,14 +1,32 @@
 import { useState } from 'react'
 import './App.css'
-import Header from './Header'
+import Header from './Components/Header/Header'
+import Footer from './Components/Footer/Footer'
+import Homepage from './Components/Pages/Homepage'
+import Contact from './Components/Pages/Contact/Contact'
+import ProductDetails from './Components/Pages/Product-Details/ProductDetails'
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import CartContextProvider from './Context/ContextCart'
+import Checkout from './Components/Pages/Checkout/Checkout'
 
 function App() {
 
   return(
-    <div className="header-container">
+    <BrowserRouter>
+      <>
+      <CartContextProvider>
         <Header />
-    </div>
-
+        <Routes>
+          <Route path='/' element={<Homepage />} />
+          <Route path='/contact-us' element={<Contact/>} />
+          <Route path='/details/:productId' element={<ProductDetails />} />
+          <Route path='/checkout' element={<Checkout/>} />
+        </Routes>
+        <Footer />
+        </CartContextProvider>
+      </>
+    </BrowserRouter>
+      /////BrowserRouter isn't set up properly, watch the video
   )
 
 }

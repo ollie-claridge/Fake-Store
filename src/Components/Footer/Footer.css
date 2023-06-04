@@ -1,0 +1,23 @@
+.Footer{
+    height: 40px;
+    background-color: #3A4895;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    padding-right: 30px;
+
+}
+
+.contact-btn{
+    color: white;
+    margin-right: 10px;
+    border: none;
+    cursor: pointer;
+    padding: 3px;
+    background-color: #3A4895;
+}

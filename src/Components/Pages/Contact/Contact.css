@@ -1,0 +1,40 @@
+.contact-page{
+min-height: 100vh;
+background-color: #FAFAFA;
+display: flex;
+justify-content: center;
+}
+
+h2{
+    color: black;
+}
+
+
+.contact-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 400px;
+    text-align: center;
+}
+
+.contact-container input{
+    height: 30px;
+    border-radius: 5px;
+    background-color: gray;
+    color: white;
+    display: flex;
+    width: 500px;
+}
+
+.contact-container input:nth-child(4){
+    height: 100px;
+}
+
+.contact-container button{
+    width: 100px;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+}

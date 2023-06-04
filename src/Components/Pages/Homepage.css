@@ -1,0 +1,24 @@
+.Homepage{
+    min-height: 100vh;
+    background-color: #FAFAFA;
+}
+
+
+.categories-container{
+    display: flex;
+    width:80%;
+    justify-content: space-around;
+    color: #5264C3;
+    padding: 20px;
+
+}
+
+.categories-container p{
+    cursor: pointer;
+}
+
+.products{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}

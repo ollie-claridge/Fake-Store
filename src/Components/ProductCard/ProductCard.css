@@ -1,0 +1,67 @@
+.Card{
+    width: 230px;
+    height: 248px;
+    height: auto;
+    margin: 25px;
+    padding: 10px;
+    border: solid 2px #3A4895;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    color: black;
+    border-radius: 8px;
+}
+
+.Card h2{
+    font-size: 12px;
+}
+
+.Card img{
+    padding: 16px;
+    height: 117px;
+    width: auto;
+
+    
+}
+
+.product-info{
+display: flex;
+flex-direction: column;
+width: 80%;
+height: 80%;
+justify-content: space-around;
+color: black;
+flex-wrap: wrap;
+}
+
+.product-info a{
+    color: black;
+    border: 1px black solid; border-radius: 4px;
+    width: 90px;
+    padding: 2px;
+    font-size: 8px;
+    position: relative;
+    left: 0px;
+}
+
+
+.product-image{
+    display: flex;
+    justify-content: center;
+    border: 1px solid gray;
+    position: relative;
+}
+
+.full-heart{
+    position: absolute;
+    right: 10px;
+    top: 7px;
+    font-size: 15px;
+}
+
+.null-heart{
+    position: absolute;
+    right: 10px;
+    top: 7px;
+    font-size: 15px;
+}
