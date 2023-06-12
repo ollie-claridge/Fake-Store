@@ -1,0 +1,8 @@
+.cart-card{   
+    display: flex;
+    height: auto;
+    width: 80%;
+    justify-content: space-around;
+    border-top: solid #b4b4b4;
+    background-color: white;
+}

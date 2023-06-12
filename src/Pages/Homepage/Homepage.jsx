@@ -1,7 +1,7 @@
 import React, {useEffect, useState, useContext} from 'react'
 import './Homepage.css'
 import axios from 'axios'
-import ProductCard from '../ProductCard/ProductCard'
+import ProductCard from '../../Components/ProductCard/ProductCard'
 import { CartContext } from '../../Context/ContextCart'
 
  
@@ -67,6 +67,7 @@ function Homepage() {
         // This function will generate all the products again
         axios.get(`https://fakestoreapi.com/products`)
           .then((res) => {
+            console.log(res.data)
             setProducts(res.data); // Update the state with the fetched data
           })
           .catch((err) => console.log(err));
@@ -78,15 +79,15 @@ function Homepage() {
             <div className="categories-container">
                 <p onClick={fetchAllProducts}>All</p>
                     {
-                    categories.map(item=><p  key={item.id} style={{cursor: 'pointer'}} onClick={ ()=>findCategory(item)}>{item}</p>)
+                   categories.map(item=><p  key={item} style={{cursor: 'pointer'}} onClick={ ()=>findCategory(item)}>{item}</p>)
                     }
-            </div>
+            </div>  
 
             
 
             <div className='products'>
                     {
-                    products.map(item=><ProductCard key={item.id} product={item}/>)
+                    products.map(item=><ProductCard key={item?.id} product={item}/>)
                     }
             </div>
     </div>

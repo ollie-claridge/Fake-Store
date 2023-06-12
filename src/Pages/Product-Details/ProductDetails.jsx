@@ -2,6 +2,8 @@ import React from 'react'
 import './ProductDetails.css'
 import { useParams } from 'react-router-dom'
 import axios from 'axios'
+import { CartContext } from '../../Context/ContextCart'
+
 
 function ProductDetails() {
 
@@ -38,7 +40,7 @@ function ProductDetails() {
             <p>{details.price}€</p>
             <h3>Description:</h3>
             <p>{details.description}</p>
-            <button className='details-btn'>Add to Card</button>
+            <button className='details-btn' onClick={()=>{addProduct(product)}}>Add to Card</button>
         </div>
         </div>
     </div>

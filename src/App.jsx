@@ -2,12 +2,12 @@ import { useState } from 'react'
 import './App.css'
 import Header from './Components/Header/Header'
 import Footer from './Components/Footer/Footer'
-import Homepage from './Components/Pages/Homepage'
-import Contact from './Components/Pages/Contact/Contact'
-import ProductDetails from './Components/Pages/Product-Details/ProductDetails'
+import Homepage from './Pages/Homepage/Homepage'
+import Contact from './Pages/Contact/Contact'
+import ProductDetails from './Pages/Product-Details/ProductDetails'
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import CartContextProvider from './Context/ContextCart'
-import Checkout from './Components/Pages/Checkout/Checkout'
+import Checkout from './Pages/Checkout/Checkout'
 
 function App() {
 

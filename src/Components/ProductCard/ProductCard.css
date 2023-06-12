@@ -57,11 +57,10 @@ flex-wrap: wrap;
     right: 10px;
     top: 7px;
     font-size: 15px;
+    cursor: pointer;
 }
 
-.null-heart{
-    position: absolute;
-    right: 10px;
-    top: 7px;
-    font-size: 15px;
+.card-btn{
+    background-color: #FFD814;
+    border: #FFD814;
 }

@@ -11,6 +11,9 @@ const customStyles = {
     bottom: 'auto',
     marginRight: '-50%',
     transform: 'translate(-50%, -50%)',
+    // display: 'flex',
+    // justifyContent: 'spaceAround',
+    // alignContent: 'center',
   },
 }
 
@@ -28,15 +31,12 @@ function Footer() {
         style={customStyles}//styles are ^^^^^
         contentLabel="Contact Us"
       >
-        <h2>hello</h2>
+        <h2>Your order was sucsessful!</h2>
+        <h2>Check your email for order confirmation. Thank you for shopping with Fake Store!</h2>
+        <button>Return to Main Page</button>
         {/* <button onClick={closeModal}>close</button> */}
-        <div>I am a modal</div>
         <form>
-          <input />
-          <button>tab navigation</button>
-          <button>stays</button>
-          <button>inside</button>
-          <button>the modal</button>
+
         </form>
       </Modal>
     </div>
