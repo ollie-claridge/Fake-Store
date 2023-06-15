@@ -1,8 +1,10 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import './ProductDetails.css'
 import { useParams } from 'react-router-dom'
 import axios from 'axios'
 import { CartContext } from '../../Context/ContextCart'
+import ProductCard from '../../Components/ProductCard/ProductCard'
+
 
 
 function ProductDetails() {
@@ -10,6 +12,8 @@ function ProductDetails() {
     //This page will show the details of the product from the ID found inside the URL
 
     const {productId} = useParams()
+
+    const {addProduct, product} = useContext(CartContext)
 
     React.useEffect(
         ()=>{

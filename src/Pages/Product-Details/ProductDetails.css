@@ -45,12 +45,13 @@ width: 300px;
 }
 
 .details-btn{
-    background-color: yellow;
+    background-color: #FFD814;
     color: black;
     font-weight: 900;
     cursor: pointer;
     height: 30px;
     width: 100px;
     margin-top: 10px;
+    border: none;
 
 }

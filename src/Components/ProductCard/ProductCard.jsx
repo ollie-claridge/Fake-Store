@@ -8,7 +8,7 @@ function ProductCard({product}) {
 
   // acsess the globel context
   // global context uses {} not []
-  const {cart, addProduct, removeProduct, lowCartCount, addCartCount} = useContext(CartContext)
+  const {cart, addProduct, removeProduct } = useContext(CartContext)
 
 
   //Create a varible for the add to cart hearts
@@ -16,10 +16,10 @@ function ProductCard({product}) {
 
   React.useEffect(
     ()=>{
-      console.log("update")
+      // console.log("update")
       // need to find out if the product is in cart
 
-      setAddToCart(cart.find(item=> item.id === product.id))
+      setAddToCart(cart.find(item => item.id === product.id))
       // if undefined it will be false
 
     }, [cart, product.id]
@@ -30,9 +30,9 @@ function ProductCard({product}) {
           <div className="product-image">
           {
             addToCart?
-            <FaHeart className='full-heart' onClick={()=>{removeProduct(product.id);lowCartCount()}} />
+            <FaHeart className='full-heart' onClick={()=>{removeProduct(product.id)}} />
             :
-            <FaRegHeart className='full-heart' onClick={()=>{addProduct(product);addCartCount()}} />
+            <FaRegHeart className='full-heart' onClick={()=>{addProduct(product)}} />
           }
       <img src={product?.image}/>
       </div>
@@ -40,7 +40,7 @@ function ProductCard({product}) {
     <h2>{product?.title}</h2>
     <p>{product?.price}€</p>
 
-    <a href={`/details/${product?.id}`} className='card-btn'>See Product</a> /*///Cant change the border?///*/
+    <a href={`/details/${product?.id}`} className='card-btn'>See Product</a>
     
        </div>
         </div>

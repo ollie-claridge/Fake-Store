@@ -9,7 +9,7 @@ import {Link} from 'react-router-dom'
 
 
 function Header() {
-  const {cart, setCart} = useContext(CartContext)
+  const {cart} = useContext(CartContext)
   return (
     
         <>

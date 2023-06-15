@@ -4,24 +4,25 @@ import { BsTrash } from "react-icons/bs";
 import { CartContext } from '../../Context/ContextCart';
 import { Link } from 'react-router-dom'
 
-function CartCard() {
+function CartCard({checkoutProduct}) {
 
 
     //this is used for global state 
     // {} not []
-    const {removeProduct, lowCartCount} = useContext(CartContext)
+    const {removeProduct, product} = useContext(CartContext) 
 
-
+    
+console.log(product)
   return (
+    //I am making a new car using the same info called for the product card, just arranged differrntly 
     <div className="cart-card">
-        <div className="cart-card-img">
-            <img src={ProductCard.image}/>
-        </div>
-        <Link to={'/details/${product.id}'}className='cart-card-title'>{product.title}</Link>
-        <p className='cart-card-price'>{product.price}</p>
+            <img src={checkoutProduct?.image}/>
+        <Link to={'/details/${product.id}'}className='cart-card-title'>{checkoutProduct?.title}</Link>
+        <p className='cart-card-price'>{checkoutProduct?.price}</p>
         <p className='cart-card-quantity'>1</p>
         {
-            <BsTrash className='bin-icon'onClick={()=>{removeProduct(product.id);lowCartCount()}} />
+          //This bin icon will be used to remove any unwanted products from the shopping cart
+            <BsTrash className='bin-icon'onClick={()=>{removeProduct(checkoutProduct.id)}} />
         }
     </div>
   )

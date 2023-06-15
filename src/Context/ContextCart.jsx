@@ -15,14 +15,7 @@ export default function CartContextProvider(props){
         setCart(newCart)
 
     }
-        //adding value to the shopping cart
-    const addCartCount = () =>{
-        setCartNumProduct(cartNumProduct+1)
-    }
 
-    const lowCartCount = () =>{
-        setCartNumProduct(cartNumProduct-1)
-    }
         
 
     // function to remove a charater 
@@ -36,7 +29,7 @@ export default function CartContextProvider(props){
 
 
     return(
-        <CartContext.Provider value={{cart, addProduct, removeProduct, addCartCount, lowCartCount}} >
+        <CartContext.Provider value={{cart, addProduct, removeProduct, ProductCard}} >
             {props.children}
 
         </CartContext.Provider>
