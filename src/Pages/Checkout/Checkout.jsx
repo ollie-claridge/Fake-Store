@@ -30,9 +30,18 @@ Modal.setAppElement(document.getElementById('root'));
 
 function Checkout() {
  
-    const {cart, product, addProduct, removeProduct} = useContext(CartContext)
+    
+  
+    //I'll context to create a global state to store the content of the cart
+  
+  const {cart} = useContext(CartContext)
+
+
+    //This state is used to keep the modal from being open until the onlclick opens it
 
     const [isOpen, setIsOpen] = useState(false); // Modal state
+
+    const [total, setTotal] = React.useState(0)
   
     const openModal = () => {
       setIsOpen(true);
@@ -43,10 +52,23 @@ function Checkout() {
     };
 
 
-   
+   React.useEffect(
 
-  //Using useContext I can store the changes when the page loads with useEffect
-  //I'll create a state to store the value of the cart
+    ()=>{
+
+      let total = 0;
+      //I need a for loop to check the current cart arrays prices and add them up
+      for(let i = 0; i < cart.length; i++){
+
+      //add the total
+      total = total += cart[i].price;
+      }
+      setTotal(total)//this updates the total state
+    
+
+    },[cart]
+    )
+  
 
 ///
 
@@ -56,7 +78,7 @@ function Checkout() {
     <div className="checkout-container">
         <div className="checkout-headers">
             <h2 className='cart-heading-item'>Item</h2>
-            <h2 className='cart-heading-descrption'></h2>
+            <h2 className='cart-heading-title'></h2>
             <h2 className='cart-heading'>Price</h2>
             <h2 className='cart-heading'>Quantity</h2>
             <h2 className='cart-heading'>Remove</h2>
@@ -68,8 +90,11 @@ function Checkout() {
           }
       </div>
 
-
+          <div className='total-price'>
+          <h2>Total: {total}€</h2>
+        </div>
         <button className="submit-btn"onClick={openModal}>Submit</button>
+        
         </div>
 
 
