@@ -17,6 +17,7 @@ h2{
     align-items: center;
     height: 400px;
     text-align: center;
+    color: white;
 }
 
 .contact-container input{
@@ -26,6 +27,11 @@ h2{
     color: white;
     display: flex;
     width: 500px;
+    color: white;
+}
+
+.contact-container input::placeholder{
+ color: white;
 }
 
 .contact-container input:nth-child(4){
