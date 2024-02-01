@@ -3,9 +3,9 @@ import './Checkout.css'
 import { CartContext } from '../../Context/ContextCart'
 import {ImBin} from "react-icons/im";
 import Modal from 'react-modal'
-import {Link} from 'react-router-dom'
-import ProductCard from '../../Components/ProductCard/ProductCard';
-import axios from 'axios';
+  import {Link} from 'react-router-dom'
+  import ProductCard from '../../Components/ProductCard/ProductCard';
+  import axios from 'axios';
 import CartCard from '../../Components/CardCard/CartCard';
 
 const customStyles = {
